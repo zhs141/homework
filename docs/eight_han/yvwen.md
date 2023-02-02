@@ -19,3 +19,4 @@
 - [ ] 作文一
 - [ ] 作文二
 >[返回上一页](https://zhs141.github.io/homework/eight_han/index.html)
+>[点击白嫖语文答案](https://zhs141.github.io/homework/eight_han/YvWen_DaAn)
