@@ -6,7 +6,7 @@
 - [其他科：懒得写了](https://zhs141.github.io/homework/eight_han)
 >
 
-    #时间都去哪了，还没好好写作业，寒假就完了～
+    时间都去哪了，还没好好写作业，寒假就完了～
 
 >[返回主页](https://zhs141.github.io/homework)
 ###### © 2023 版权所有
