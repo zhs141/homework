@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        div {
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            margin-top: 200px;
+            text-align: center;
+        }
+ 
+        .hour,
+        .minute,
+        .second {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            line-height: 40px;
+            padding: 40px;
+        }
+    </style>
     <meta charset="UTF-8">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -16,7 +42,6 @@
 <meta property="twitter:title" conten t="张三作业实时完成情况" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@ty pe":"WebSite","headline":"张三作业实时完成情况","name":"homework","url":"ht tps://zhs141.github.io/homework/"}</s cript>
-<!-- End Jekyll SEO tag -->
 
     <link rel="preconnect" href="http s://fonts.gstatic.com">
     <link rel="preload" href="https:/ /fonts.googleapis.com/css?family=Open +Sans:400,700&display=swap" as="style " type="text/css" crossorigin>
@@ -24,21 +49,15 @@
     <meta name="theme-color" content= "#157878">
     <meta name="apple-mobile-web-app- status-bar-style" content="black-tran slucent">
     <link rel="stylesheet" href="/hom ework/assets/css/style.css?v=72fd821e 9c48d4e8dd6fde9d605ef38c735f2c25">
-    <!-- start custom head snippets,  customize with your own _includes/hea d-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -- >
-<!-- link rel="shortcut icon" type="i mage/x-icon" href="/homework/favicon. ico" -->
-
-<!-- end custom head snippets -->
 
   </head>
   <body>
     <a id="skip-to-content" href="#co ntent">Skip to the content.</a>
-
+    <div>
+      <span class="hour">1</span>
+      <span class="minute">2</span>
+      <span class="second">3</span>
+    </div>
     <header class="page-header" role= "banner">
       <h1 class="project-name">张三作 业实时完成情况</h1>
       <h2 class="project-tagline"></h 2>
@@ -54,7 +73,42 @@
   <li><a href="https://zhs141.github. io/homework/七上寒/index.html">七年级 上册寒假作业</a></li>
   <li><a href="https://zhs141.github. io/homework/七下第一次疫情停课/index. html">七下第一次疫情停课作业</a></li>   <li><a href="https://zhs141.github. io/homework/eight_han/index.html">八上寒假作业</a></li>
 </ul>
-
+   <script>
+        
+        //1、获取元素
+        var hour = document.querySelector('.hour');//小时的黑色盒子
+        var minute = document.querySelector('.minute');//分钟的黑色盒子
+        var second = document.querySelector('.second');//秒数的黑色盒子
+        var inputTime = +new Date('2023-2-6 18:40:00');//定义结束的时间
+        countDown();                         //先调用一次防止第一次刷新页面有空白
+        var i = 0;
+        var timer = null;                     //定义一个全局变量方便清除定时器
+        //2、开启定时器
+        
+        timer = setInterval(countDown, 1000);         //每隔一秒调用一次
+ 
+        function countDown(time) {
+            var nowTime = +new Date();  //返回的是当前时间总的毫秒数
+            var times = (inputTime - nowTime) / 1000;     //times 是剩余时间总的秒数
+            var h = parseInt(times / 60 / 60 % 24);      //计算小时
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h;
+            var m = parseInt(times / 60 % 60);         //计算分钟
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m;
+            var s = parseInt(times % 60);            //计算秒数
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+            console.log(111);
+            if (s == '00' && h == '00' && m == '00') {
+                second.innerHTML = '00';
+                clearInterval(timer);
+                setTimeout(function () {         //添加一个定时器，使秒出现 00 时 再弹出提示框
+                    alert('开学了！');
+                }, 1);                           //1ms
+            }
+        }
+    </script>
 
       <footer class="site-footer">
 
