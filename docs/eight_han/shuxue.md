@@ -1,18 +1,18 @@
 # 数学
-* [ ] 测试卷一
+* [x] 测试卷一
 - [x] Page 1
 - [x] Page 2
 - [x] Page 3
 - [x] Page 4
 - [x] Page 5
-- [ ] Page 6
-- [ ] Page 7
+- [x] Page 6
+- [x] Page 7
 
 * [ ] 测试卷二
-- [ ] Page 1
-- [ ] Page 2
-- [ ] Page 3
-- [ ] Page 4
+- [x] Page 1
+- [x] Page 2
+- [x] Page 3
+- [x] Page 4
 - [ ] Page 5
 - [ ] Page 6
 
