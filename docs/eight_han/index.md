@@ -11,7 +11,7 @@
 - [其他科：懒得写了](https://zhs141.github.io/homework/eight_han)
 
 
->[查看开学倒计时](https://zhs141.github.io/homework/time.html)
+>[查看开学倒计时](https://zhs141.github.io/homework/eight_han/time.html)
 -
 >[返回主页](https://zhs141.github.io/homework)
 
