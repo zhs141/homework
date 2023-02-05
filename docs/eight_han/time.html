@@ -40,7 +40,7 @@
         var hour = document.querySelector('.hour');//小时的黑色盒子
         var minute = document.querySelector('.minute');//分钟的黑色盒子
         var second = document.querySelector('.second');//秒数的黑色盒子
-        var inputTime = +new Date('2021-8-19 15:30:00');//定义结束的时间
+        var inputTime = +new Date('2023-2-6 18:40:00');//定义结束的时间
         countDown();                         //先调用一次防止第一次刷新页面有空白
         var i = 0;
         var timer = null;                     //定义一个全局变量方便清除定时器
@@ -65,7 +65,7 @@
                 clearInterval(timer);
  
                 setTimeout(function () {         //添加一个定时器，使秒出现 00 时 再弹出提示框
-                    alert('时间到了');
+                    alert('开学了！');
                 }, 1);                           //1ms
             }
         }
