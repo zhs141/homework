@@ -69,7 +69,7 @@
             minute.innerHTML = m < 10 ? '0' + m : m;
             second.innerHTML = s < 10 ? '0' + s : s;
 
-            if (s == 0 && h == 0 && m == 0 && d == 0) {
+            if (d==0 && s == 0 && h == 0 && m == 0 && d == 0) {
                 clearInterval(timer);
                 setTimeout(function () {
                     alert('开学了！');
