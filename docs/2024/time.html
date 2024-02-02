@@ -8,19 +8,22 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif; /* 保持字体居中 */
         }
 
         body {
-            background: url('https://zhs141.github.io/image/bggif.gif') no-repeat center center fixed;
+            background: url('https://zhs141.github.io/image/bggif.gif') repeat; /* 背景图片平铺 */
             background-size: cover;
         }
 
-        div {
+        div.container {
             width: 800px;
-            height: 800px;
             margin: 0 auto;
             margin-top: 200px;
             text-align: center;
+            background-color: rgba(255, 255, 255, 0.7); /* 添加背景颜色以增加可读性 */
+            padding: 20px; /* 增加内边距 */
         }
 
         .day,
@@ -42,11 +45,11 @@
 <body>
     <h1 align="center">开学倒计时</h1>
     <h3 align="center">温馨提示，距离开学还有：</h3>
-    <div>
-        <span class="day">0</span>
-        <span class="hour">0</span>
-        <span class="minute">0</span>
-        <span class="second">0</span>
+    <div class="container">
+        <span class="day">0</span> 天
+        <span class="hour">0</span> 时
+        <span class="minute">0</span> 分
+        <span class="second">0</span> 秒
     </div>
     <script>
         var day = document.querySelector('.day');
