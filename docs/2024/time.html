@@ -1,1 +1,82 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Countdown</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    .container {
+        display: flex;
+    }
+    .box {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        animation: rainbow 10s linear infinite;
+    }
+    .box:nth-child(1) {
+        background: linear-gradient(to bottom, red, orange);
+    }
+    .box:nth-child(2) {
+        background: linear-gradient(to bottom, orange, yellow);
+    }
+    .box:nth-child(3) {
+        background: linear-gradient(to bottom, yellow, green);
+    }
+    .box:nth-child(4) {
+        background: linear-gradient(to bottom, green, blue);
+    }
+    @keyframes rainbow {
+        0% { background: linear-gradient(to bottom, red, orange); }
+        25% { background: linear-gradient(to bottom, orange, yellow); }
+        50% { background: linear-gradient(to bottom, yellow, green); }
+        75% { background: linear-gradient(to bottom, green, blue); }
+        100% { background: linear-gradient(to bottom, blue, violet); }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box" id="days"></div>
+    <div class="box" id="hours"></div>
+    <div class="box" id="minutes"></div>
+    <div class="box" id="seconds"></div>
+</div>
+<script>
+    function updateCountdown() {
+        var targetDate = new Date('2024-01-25T18:40:00+08:00'); // 开学日期
+        var currentDate = new Date();
+        var timeRemaining = targetDate - currentDate;
+
+        var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = days + ' 天';
+        document.getElementById('hours').textContent = hours + ' 小时';
+        document.getElementById('minutes').textContent = minutes + ' 分钟';
+        document.getElementById('seconds').textContent = seconds + ' 秒';
+    }
+
+    updateCountdown(); // 初始化显示
+
+    setInterval(updateCountdown, 1000); // 每秒更新一次倒计时
+</script>
+</body>
+</html>
