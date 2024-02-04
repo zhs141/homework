@@ -1,69 +1,70 @@
 <html lang="zh">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <style>  
-        * {  
-            margin: 0;  
-            padding: 0;  
-            box-sizing: border-box;  
-            font-family: Arial, sans-serif; 
-        } 
-
-        div.container {  
-            width: 80%;  
-            max-width: 600px;  
-            margin: 20vh auto 0; /* 调整上边距 */ 
-            text-align: center;  
-            background-color: rgba(255, 255, 255, 0.9); /* 调整背景颜色和透明度 */  
-            padding: 20px; /* 增加内边距 */  
-            display: flex;  
-            justify-content: center;  
-            flex-wrap: wrap;  
-            position: relative; /* 设置为相对定位 */ 
-            border-radius: 10px; /* 可选：添加圆角效果 */
-        }  
-
-        .container::before { /* 使用伪元素添加背景图片 */ 
-            content: ""; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            right: 0; 
-            bottom: 0; 
-            background-image: url('https://pic.baike.soso.com/ugc/baikepic2/0/20230305151413-317313212_jpeg_960_640_320403.jpg/0_90'); /* 替换为你的图片URL */ 
-            background-size: cover; /* 覆盖整个容器，保持图片比例 */ 
-            background-position: center; /* 图片居中显示 */ 
-            opacity: 0.5; /* 设置背景图片的透明度 */
-            z-index: -1; /* 确保文字内容在图片上方 */ 
-        }  
-
-        .day, .hour, .minute, .second {  
-            display: inline-flex;  
-            justify-content: center; 
-            align-items: center; 
-            width: 50px;  
-            height: 50px;  
-            background-color: black;  
-            color: white;  
-            margin: 5px;  
-            flex: 1 1 auto;  
-            min-width: 60px;  
-            position: relative; /* 提升层级，确保在背景图片之上 */ 
-        }  
-    </style>  
-    <title>开学倒计时</title>  
-</head>  
-<body background="https://zhs141.github.io/image/bggif.gif">  
-    <h1 align="center">开学倒计时</h1>  
-    <h3 align="center">温馨提示，距离开学还有：</h3>  
-    <div class="container">  
-        <span class="day">0</span> 天  
-        <span class="hour">0</span> 时  
-        <span class="minute">0</span> 分  
-        <span class="second">0</span> 秒  
-    </div>  
+ <head>  
+     <meta charset="UTF-8">  
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+     <style>  
+         * {  
+             margin: 0;  
+             padding: 0;  
+             box-sizing: border-box;  
+             font-family: Arial, sans-serif; 
+         }  
+  
+         div.container {  
+             width: 80%;  
+             max-width: 600px;  
+             margin: 20vh auto 0; /* 调整上边距 */ 
+             text-align: center;  
+             background-color: rgba(255, 255, 255, 0.7);  
+             padding: 8px;  
+             display: flex;  
+             justify-content: center;  
+             flex-wrap: wrap;  
+             position: relative; /* 设置为相对定位 */ 
+         }  
+  
+         .container::before { /* 使用伪元素添加背景图片 */ 
+             content: ""; 
+             position: absolute; 
+             top: 0; 
+             left: 0; 
+             right: 0; 
+             bottom: 0; 
+             background-image: url('https://pic.baike.soso.com/ugc/baikepic2/0/20230305151413-317313212_jpeg_960_640_320403.jpg/0_90'); /* 替换为你的图片URL */ 
+             background-size: cover; /* 覆盖整个容器，保持图片比例 */ 
+             background-position: center; /* 图片居中显示 */ 
+             z-index: -1; /* 确保文字内容在图片上方 */ 
+         } 
+  
+         .day,  
+         .hour,  
+         .minute,  
+         .second {  
+             display: inline-flex;  
+             justify-content: center; 
+             align-items: center; 
+             width: 50px;  
+             height: 50px;  
+             background-color: black;  
+             color: white;  
+             margin: 5px;  
+             flex: 1 1 auto;  
+             min-width: 60px;  
+             position: relative; /* 提升层级，确保在背景图片之上 */ 
+         }  
+     </style>  
+     <title>开学倒计时</title>  
+ </head>  
+ <body background="https://zhs141.github.io/image/bggif.gif">  
+     <h1 align="center">开学倒计时</h1>  
+     <h3 align="center">温馨提示，距离开学还有：</h3>  
+     <div class="container">  
+         <span class="day">0</span> 天  
+         <span class="hour">0</span> 时  
+         <span class="minute">0</span> 分  
+         <span class="second">0</span> 秒  
+     </div>  
      <script>  
          var day = document.querySelector('.day');  
          var hour = document.querySelector('.hour');  
@@ -94,8 +95,10 @@
              }  
          }  
      </script>  
-    <h3 align="center">请各位同学抓紧时间完成作业～</h3>  
-    <h3><button><a href="https://zhs141.github.io/homework/2024">回到上一页</a></h3></button>  
-    <h6 align="center">© 2023-2024 zhs141.github.io</h3>  
-</body>  
-</html>
+     <h3 align="center">请各位同学抓紧时间完成作业～</h3>  
+     <h3><button><a href="https://zhs141.github.io/homework/2024">回到上一页</a></h3></button>  
+     <h6 align="center">© 2023-2024 zhs141.github.io</h3>  
+ </body>  
+ </html>
+
+首先，把背景图片改为半透明的，其次，扩大白框的大小，不然展示的图片有些小了
