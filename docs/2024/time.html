@@ -65,6 +65,38 @@
         <span class="minute">0</span> 分 
         <span class="second">0</span> 秒 
     </div> 
-    <!-- JavaScript remains unchanged -->
+    <script> 
+        var day = document.querySelector('.day'); 
+        var hour = document.querySelector('.hour'); 
+        var minute = document.querySelector('.minute'); 
+        var second = document.querySelector('.second'); 
+        var inputTime = +new Date('2024-2-25 18:40:00'); 
+        countDown(); 
+        var timer = setInterval(countDown, 1000); 
+
+        function countDown(time) { 
+            var nowTime = +new Date(); 
+            var times = (inputTime - nowTime) / 1000; 
+            var d = parseInt(times / 60 / 60 / 24); 
+            var h = parseInt(times / 60 / 60 % 24); 
+            var m = parseInt(times / 60 % 60); 
+            var s = parseInt(times % 60); 
+
+            day.innerHTML = d < 10 ? '0' + d : d; 
+            hour.innerHTML = h < 10 ? '0' + h : h; 
+            minute.innerHTML = m < 10 ? '0' + m : m; 
+            second.innerHTML = s < 10 ? '0' + s : s; 
+
+            if (times <= 0) { 
+                clearInterval(timer); 
+                setTimeout(function () { 
+                    alert('开学了！'); 
+                }, 1); 
+            } 
+        } 
+    </script> 
+    <h3 align="center">请各位同学抓紧时间完成作业～</h3> 
+    <h3><button><a href="https://zhs141.github.io/homework/2024">回到上一页</a></h3></button> 
+    <h6 align="center">© 2023-2024 zhs141.github.io</h3> 
 </body> 
 </html>
