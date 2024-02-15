@@ -1,5 +1,3 @@
-title: [隐私政策]
-description: [关于访问zhs141.github.io的隐私政策]
-remote_theme: pages-themes/architect@v0.2.0
+title: 张三的作业完成实时情况
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+- jekyll-remote-theme
