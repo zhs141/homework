@@ -1,3 +1,2 @@
 title: 张三的作业完成实时情况
-plugins:
-- jekyll-cayman-theme
+theme: jekyll-theme-cayman
