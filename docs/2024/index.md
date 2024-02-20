@@ -6,7 +6,7 @@
 - [x] [数学](https://zhs141.github.io/homework/2024/shuxue.html)
 - [ ] [英语](https://zhs141.github.io/homework/2024/yingyv.html)
 - [ ] [政治](https://zhs141.github.io/homework/2024/zhengzhi.html)
-- [ ] [历史](https://zhs141.github.io/homework/2024/lishi.html)
+- [x] [历史](https://zhs141.github.io/homework/2024/lishi.html)
 - [x] [物理](https://zhs141.github.io/homework/2024/wuli.html)
 - [x] [化学](https://zhs141.github.io/homework/2024/huaxue.html)
 
