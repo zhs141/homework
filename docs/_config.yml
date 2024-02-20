@@ -1,2 +1,5 @@
-title: 张三的作业完成实时情况
-theme: jekyll-theme-cayman
+title: 张三作业完成实时情况 
+description: 不想写作业，，
+remote_theme: pages-themes/cayman@v0.2.0
+plugins: 
+- jekyll-cayman-theme
