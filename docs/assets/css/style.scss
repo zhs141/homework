@@ -5,14 +5,15 @@
 @font-face{    
        font-family: Font1;    
        src: url('https://cdn.jsdelivr.net/gh/zhs141/zhs141.github.io/HELPME/op.ttf');    
- }   
-header h1{
-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+ }
 body{   
      font-family: Font1, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 ?;  
  }
+header{}
+header h1{
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 code {
     padding: 2px 4px;
     font-family: Font1, Consolas, "Liberation Mono", Menlo, Courier, monospace;
